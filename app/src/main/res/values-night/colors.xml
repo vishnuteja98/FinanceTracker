@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark theme specific color overrides -->
+    
+    <!-- Transaction colors -->
+    <color name="debit_red">@color/debit_red_dark</color>
+    <color name="credit_green">@color/credit_green_dark</color>
+    
+    <!-- Category colors -->
+    <color name="category_food">@color/category_food_dark</color>
+    <color name="category_transfer">@color/category_transfer_dark</color>
+    <color name="category_investment">@color/category_investment_dark</color>
+    <color name="category_default">@color/category_default_dark</color>
+    
+    <!-- Notes background -->
+    <color name="notes_background">@color/notes_background_dark</color>
+    
+    <!-- FAB colors for dark theme with high contrast -->
+    <color name="fab_background">#00BCD4</color> <!-- Brighter cyan for dark theme -->
+    <color name="fab_icon">#000000</color> <!-- Pure black for maximum contrast on bright background -->
+</resources>

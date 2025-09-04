@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_pending">
+
+    <fragment
+        android:id="@+id/navigation_pending"
+        android:name="com.financetracker.ui.pending.PendingTransactionsFragment"
+        android:label="@string/title_pending"
+        tools:layout="@layout/fragment_pending_transactions" />
+
+    <fragment
+        android:id="@+id/navigation_transactions"
+        android:name="com.financetracker.ui.transactions.TransactionsFragment"
+        android:label="@string/title_transactions"
+        tools:layout="@layout/fragment_transactions" />
+
+    <fragment
+        android:id="@+id/navigation_accounts"
+        android:name="com.financetracker.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_bank_accounts"
+        android:name="com.financetracker.ui.accounts.BankAccountsFragment"
+        android:label="@string/title_accounts"
+        tools:layout="@layout/fragment_bank_accounts" />
+
+    <action
+        android:id="@+id/action_profile_to_bank_accounts"
+        app:destination="@id/navigation_bank_accounts" />
+
+
+
+</navigation>

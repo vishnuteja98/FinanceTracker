@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Modern Finance App Color Palette -->
+    <!-- Primary colors - Sophisticated teal/green for finance -->
+    <color name="primary_50">#E0F2F1</color>
+    <color name="primary_100">#B2DFDB</color>
+    <color name="primary_200">#80CBC4</color>
+    <color name="primary_300">#4DB6AC</color>
+    <color name="primary_400">#26A69A</color>
+    <color name="primary_500">#009688</color>
+    <color name="primary_600">#00897B</color>
+    <color name="primary_700">#00796B</color>
+    <color name="primary_800">#00695C</color>
+    <color name="primary_900">#004D40</color>
+    
+    <!-- Secondary colors - Warm accent -->
+    <color name="secondary_50">#FFF3E0</color>
+    <color name="secondary_100">#FFE0B2</color>
+    <color name="secondary_200">#FFCC80</color>
+    <color name="secondary_300">#FFB74D</color>
+    <color name="secondary_400">#FFA726</color>
+    <color name="secondary_500">#FF9800</color>
+    <color name="secondary_600">#FB8C00</color>
+    <color name="secondary_700">#F57C00</color>
+    <color name="secondary_800">#EF6C00</color>
+    <color name="secondary_900">#E65100</color>
+    
+    <!-- Light Theme Colors -->
+    <color name="md_theme_light_primary">@color/primary_600</color>
+    <color name="md_theme_light_onPrimary">@color/white</color>
+    <color name="md_theme_light_primaryContainer">@color/primary_100</color>
+    <color name="md_theme_light_onPrimaryContainer">@color/primary_900</color>
+    <color name="md_theme_light_secondary">@color/secondary_600</color>
+    <color name="md_theme_light_onSecondary">@color/white</color>
+    <color name="md_theme_light_surface">#FDFCFF</color>
+    <color name="md_theme_light_onSurface">#1C1B1F</color>
+    <color name="md_theme_light_surfaceVariant">#F4F0F7</color>
+    <color name="md_theme_light_onSurfaceVariant">#49454F</color>
+    <color name="md_theme_light_background">#FDFCFF</color>
+    <color name="md_theme_light_onBackground">#1C1B1F</color>
+    
+    <!-- Dark Theme Colors -->
+    <color name="md_theme_dark_primary">@color/primary_200</color>
+    <color name="md_theme_dark_onPrimary">@color/primary_800</color>
+    <color name="md_theme_dark_primaryContainer">@color/primary_700</color>
+    <color name="md_theme_dark_onPrimaryContainer">@color/primary_100</color>
+    <color name="md_theme_dark_secondary">@color/secondary_200</color>
+    <color name="md_theme_dark_onSecondary">@color/secondary_800</color>
+    <color name="md_theme_dark_surface">#141218</color>
+    <color name="md_theme_dark_onSurface">#E6E1E5</color>
+    <color name="md_theme_dark_surfaceVariant">#49454F</color>
+    <color name="md_theme_dark_onSurfaceVariant">#CAC4D0</color>
+    <color name="md_theme_dark_background">#101014</color>
+    <color name="md_theme_dark_onBackground">#E6E1E5</color>
+    
+    <!-- Transaction colors (adaptive) -->
+    <color name="debit_red_light">#D32F2F</color>
+    <color name="debit_red_dark">#EF5350</color>
+    <color name="credit_green_light">#388E3C</color>
+    <color name="credit_green_dark">#66BB6A</color>
+    
+    <!-- Category colors (adaptive) -->
+    <color name="category_food_light">#FF7043</color>
+    <color name="category_food_dark">#FF8A65</color>
+    <color name="category_transfer_light">#1976D2</color>
+    <color name="category_transfer_dark">#42A5F5</color>
+    <color name="category_investment_light">#388E3C</color>
+    <color name="category_investment_dark">#66BB6A</color>
+    <color name="category_default_light">#7B1FA2</color>
+    <color name="category_default_dark">#AB47BC</color>
+    
+
+    
+    <!-- Notes background (adaptive) -->
+    <color name="notes_background_light">#F8F9FA</color>
+    <color name="notes_background_dark">#1E1E1E</color>
+    
+    <!-- Default light theme colors (overridden in values-night) -->
+    <color name="debit_red">@color/debit_red_light</color>
+    <color name="credit_green">@color/credit_green_light</color>
+    <color name="category_food">@color/category_food_light</color>
+    <color name="category_transfer">@color/category_transfer_light</color>
+    <color name="category_investment">@color/category_investment_light</color>
+    <color name="category_default">@color/category_default_light</color>
+
+    <color name="notes_background">@color/notes_background_light</color>
+    
+    <!-- FAB colors for high contrast -->
+    <color name="fab_background">#009688</color> <!-- Teal primary -->
+    <color name="fab_icon">#FFFFFF</color> <!-- Pure white for maximum contrast -->
+</resources>

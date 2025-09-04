@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Finance Tracker</string>
+    <string name="app_subtitle">Smart Transaction Analyzer</string>
+    <string name="add_transaction">Add Transaction</string>
+    <string name="navigate_back">Navigate back</string>
+    
+    <!-- Navigation titles -->
+    <string name="title_pending">Pending</string>
+    <string name="title_transactions">Transactions</string>
+    <string name="title_accounts">Accounts</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_low_value_transactions">Low Value Transactions</string>
+    
+    <!-- Transaction related -->
+    <string name="transaction_debit">Debit</string>
+    <string name="transaction_credit">Credit</string>
+    <string name="amount_format">₹%.2f</string>
+    <string name="date_format">dd MMM yyyy, HH:mm</string>
+    
+    <!-- Actions -->
+    <string name="action_categorize">Categorize</string>
+    <string name="action_ignore">Ignore</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_export">Export</string>
+    <string name="action_add">Add</string>
+    <string name="action_edit">Edit</string>
+    
+    <!-- Labels -->
+    <string name="label_category">Category</string>
+    <string name="label_subcategory">Subcategory</string>
+    <string name="label_notes">Notes</string>
+    <string name="label_bank_account">Bank Account</string>
+    <string name="label_amount">Amount</string>
+    <string name="label_description">Description</string>
+    <string name="label_date">Date</string>
+    <string name="label_merchant">Merchant</string>
+    <string name="label_balance">Balance</string>
+    
+    <!-- Bank Account -->
+    <string name="label_account_name">Account Name</string>
+    <string name="label_bank_name">Bank Name</string>
+    <string name="label_account_number">Account Number</string>
+    <string name="label_account_type">Account Type</string>
+    
+    <!-- Messages -->
+    <string name="message_no_pending_transactions">No pending transactions</string>
+    <string name="message_no_transactions">No transactions found</string>
+    <string name="message_no_bank_accounts">No bank accounts added</string>
+    <string name="message_transaction_categorized">Transaction categorized successfully</string>
+    <string name="message_transaction_ignored">Transaction ignored</string>
+    <string name="message_transaction_deleted">Transaction deleted</string>
+    <string name="message_bank_account_saved">Bank account saved</string>
+    <string name="message_export_successful">Transactions exported successfully</string>
+    
+    <!-- Permissions -->
+    <string name="permission_sms_rationale">SMS permission is required to automatically detect and extract transaction information from banking SMS messages.</string>
+    
+    <!-- Categories -->
+    <string name="category_food_dining">Food &amp; Dining</string>
+    <string name="category_investment">Investment</string>
+    <string name="category_transfer">Transfer</string>
+    <string name="category_other">Other</string>
+</resources>
