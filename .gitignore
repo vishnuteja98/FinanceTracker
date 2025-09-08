@@ -8,6 +8,9 @@
 # Java class files
 *.class
 
+# secrets
+app/google-services.json
+
 # Generated files
 bin/
 gen/
