@@ -36,8 +36,8 @@ class SmsReceiver : BroadcastReceiver() {
                 Log.e(TAG, "Message: '$messageBody'")
                 Log.e(TAG, "Enqueueing WorkManager task...")
                 
-                // Queue the SMS for processing using WorkManager
-                val workRequest = OneTimeWorkRequestBuilder<SimpleTransactionExtractionWorker>()
+        // Queue the SMS for smart processing (GenAI + Fallback) using WorkManager
+        val workRequest = OneTimeWorkRequestBuilder<SimpleSmartTransactionWorker>()
                     .setInputData(workDataOf(
                         KEY_SMS_BODY to messageBody,
                         KEY_SMS_ADDRESS to originatingAddress,

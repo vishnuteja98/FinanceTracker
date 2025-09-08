@@ -92,4 +92,11 @@
     <!-- FAB colors for high contrast -->
     <color name="fab_background">#009688</color> <!-- Teal primary -->
     <color name="fab_icon">#FFFFFF</color> <!-- Pure white for maximum contrast -->
+    
+    <!-- Chart colors for analytics -->
+    <color name="chart_color_1">#009688</color> <!-- Teal -->
+    <color name="chart_color_2">#FF9800</color> <!-- Orange -->
+    <color name="chart_color_3">#2196F3</color> <!-- Blue -->
+    <color name="chart_color_4">#4CAF50</color> <!-- Green -->
+    <color name="chart_color_5">#9C27B0</color> <!-- Purple -->
 </resources>

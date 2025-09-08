@@ -78,7 +78,7 @@ class TransactionAdapter(
                 // Bank account info
                 val bankAccount = bankAccounts.find { it.id == transaction.bankAccountId }
                 textViewBankAccount.text = when {
-                    bankAccount != null -> "${bankAccount.bankName} - ${bankAccount.accountName}"
+                    bankAccount != null -> bankAccount.accountName
                     !transaction.extractedBankInfo.isNullOrBlank() -> transaction.extractedBankInfo
                     else -> "Unknown Account"
                 }

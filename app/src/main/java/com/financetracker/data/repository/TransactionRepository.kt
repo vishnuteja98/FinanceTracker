@@ -73,6 +73,10 @@ class TransactionRepository @Inject constructor(
         return getTransactionByOriginalMessage(originalMessage) != null
     }
     
+    // Analytics methods
+    suspend fun getCategoryWiseSpending(startDate: Long? = null, endDate: Long? = null) = 
+        transactionDao.getCategoryWiseSpendingIncludingUncategorized(startDate, endDate)
+    
     // Enhanced methods with filtering, sorting, and pagination
     fun getPendingTransactionsFiltered(filter: TransactionFilter): Flow<List<Transaction>> = 
         transactionDao.getPendingTransactionsFiltered(

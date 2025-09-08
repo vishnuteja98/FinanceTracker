@@ -60,4 +60,12 @@ interface BankAccountDao {
             END
     """)
     suspend fun searchBankAccountsByKeyword(searchTerm: String): List<BankAccount>
+    
+    @Query("""
+        SELECT * FROM bank_accounts 
+        WHERE isActive = 1 AND accountNumber IS NOT NULL 
+        AND accountNumber LIKE '%' || :lastFourDigits
+        ORDER BY bankName, accountName
+    """)
+    suspend fun findAccountsByLastFourDigits(lastFourDigits: String): List<BankAccount>
 }

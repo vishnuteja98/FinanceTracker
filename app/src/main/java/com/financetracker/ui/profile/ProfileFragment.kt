@@ -35,7 +35,9 @@ class ProfileFragment : Fragment() {
             findNavController().navigate(R.id.action_profile_to_bank_accounts)
         }
 
-
+        binding.menuAnalytics.setOnClickListener {
+            findNavController().navigate(R.id.action_profile_to_analytics)
+        }
 
         // Settings menu commented out until needed
         // binding.menuSettings.setOnClickListener {

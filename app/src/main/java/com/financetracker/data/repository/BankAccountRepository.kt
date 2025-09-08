@@ -42,6 +42,9 @@ class BankAccountRepository @Inject constructor(
     suspend fun searchBankAccountsByKeyword(searchTerm: String): List<BankAccount> = 
         bankAccountDao.searchBankAccountsByKeyword(searchTerm)
     
+    suspend fun findAccountsByLastFourDigits(lastFourDigits: String): List<BankAccount> = 
+        bankAccountDao.findAccountsByLastFourDigits(lastFourDigits)
+    
     suspend fun findMatchingBankAccount(extractedBankInfo: String?): BankAccount? {
         if (extractedBankInfo.isNullOrBlank()) return null
         

@@ -10,19 +10,21 @@
 ## 🚀 Features
 
 ### 📱 Core Functionality
-- **Automatic SMS Transaction Detection** - Parses bank SMS messages to extract transaction details
-- **Smart Categorization** - AI-powered transaction categorization with manual override
-- **Multi-Bank Support** - Works with all major Indian banks (HDFC, ICICI, SBI, Axis, Kotak, etc.)
-- **Real-time Processing** - Instant transaction detection and processing
-- **OTP Filtering** - Intelligently ignores OTP and transaction initiation messages
+- **🤖 Smart AI Processing** - On-device GenAI using Google AI Edge SDK for transaction extraction
+- **🛡️ Complete Privacy** - All processing happens on-device, no data sent to cloud
+- **🏦 Multi-Bank Support** - Works with all major Indian banks (HDFC, ICICI, SBI, Axis, Kotak, etc.)
+- **⚡ Real-time Processing** - Instant transaction detection and processing
+- **🔒 Smart Filtering** - Distinguishes completed transactions from pending/initiated ones
+- **📱 Universal Compatibility** - Works across all Android devices with intelligent fallback
 
 ### 💡 Smart Features
-- **Auto Low-Value Categorization** - Automatically categorizes transactions below ₹100 as "Low Value"
-- **Pending Transaction Management** - Review, tag, or ignore detected transactions
-- **Manual Transaction Entry** - Add transactions manually via floating action button
-- **Advanced Filtering** - Filter by date range, amount, category, and bank account
-- **Intelligent Sorting** - Sort by date, amount, or recent activity
-- **Cross-Tab Synchronization** - Changes reflect instantly across all tabs
+- **🧠 Intelligent Categorization** - AI-powered transaction categorization with manual override
+- **📋 Pending Transaction Management** - Review, tag, or ignore detected transactions  
+- **➕ Manual Transaction Entry** - Add transactions manually via floating action button
+- **🔍 Advanced Filtering** - Filter by date range, amount, category, and bank account
+- **📊 Intelligent Sorting** - Sort by date, amount, or recent activity
+- **🔄 Cross-Tab Synchronization** - Changes reflect instantly across all tabs
+- **🔄 Intelligent Fallback** - Simple rule-based processing when GenAI is unavailable
 
 ### 🎨 User Experience
 - **Material Design 3** - Modern, clean interface following latest design guidelines
@@ -196,6 +198,18 @@ For testing SMS parsing without real messages:
 # Send test SMS via ADB
 adb emu sms send 12345 "Dear Customer, Rs.450.00 debited from A/c XX7890 on 16-Jan-25 for SWIGGY. Avl Bal: Rs.8,200.45. -HDFC Bank"
 ```
+
+## 🤖 AI-Powered Processing
+
+The app uses **Google AI Edge SDK** for intelligent on-device transaction processing:
+
+- **🔒 Complete Privacy** - All AI processing happens on your device
+- **⚡ No Internet Required** - Works offline with on-device GenAI
+- **📱 Universal Support** - Works on most modern Android devices
+- **🛡️ Sensitive Data Protection** - OTP and sensitive data filtered locally
+- **🔄 Smart Fallback** - Simple rule-based processing when GenAI unavailable
+
+**Processing Flow**: GenAI First → Simple Fallback → Clear separation of concerns
 
 ## 🤝 Contributing
 

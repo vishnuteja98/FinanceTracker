@@ -3,6 +3,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.devtools.ksp'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -85,6 +86,16 @@ dependencies {
     // LocalBroadcastManager
     implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.1.0'
     
+    // Import the Firebase BoM (compatible with Kotlin 1.9.22)
+    implementation platform('com.google.firebase:firebase-bom:33.1.0')
+    
+    // Firebase Analytics (required for Firebase setup)
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+    
+    // Firebase Vertex AI for Gemini API access
+    implementation 'com.google.firebase:firebase-vertexai:16.0.1'
+    
     // Privacy-first approach: Enhanced custom parser (no external dependencies)
     // ML Kit GenAI is still in early beta with compatibility issues
     // Using sophisticated regex-based parsing optimized for Indian banking SMS
@@ -98,6 +109,9 @@ dependencies {
     // Navigation
     implementation 'androidx.navigation:navigation-fragment-ktx:2.7.4'
     implementation 'androidx.navigation:navigation-ui-ktx:2.7.4'
+    
+    // Charts library for analytics
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
     
     // Testing
     testImplementation 'junit:junit:4.13.2'

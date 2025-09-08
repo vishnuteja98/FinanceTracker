@@ -1,6 +1,7 @@
 package com.financetracker.data.database
 
 import androidx.room.*
+import com.financetracker.data.models.CategorySpending
 import com.financetracker.data.models.Transaction
 import com.financetracker.data.models.TransactionStatus
 import com.financetracker.data.models.TransactionType
@@ -142,4 +143,40 @@ interface TransactionDao {
     
     @Query("SELECT SUM(amount) FROM transactions WHERE bankAccountId = :bankAccountId AND transactionType = :type AND isDeleted = 0")
     suspend fun getTotalAmountByBankAccountAndType(bankAccountId: Long, type: TransactionType): Double?
+    
+    // Analytics queries for category-wise spending
+    @Query("""
+        SELECT category, SUM(amount) as totalAmount, COUNT(*) as transactionCount
+        FROM transactions 
+        WHERE transactionType = 'DEBIT' 
+        AND isDeleted = 0 
+        AND (:startDate IS NULL OR messageReceivedAt >= :startDate)
+        AND (:endDate IS NULL OR messageReceivedAt <= :endDate)
+        AND category IS NOT NULL
+        GROUP BY category
+        ORDER BY totalAmount DESC
+    """)
+    suspend fun getCategoryWiseSpending(startDate: Long? = null, endDate: Long? = null): List<CategorySpending>
+    
+    @Query("""
+        SELECT 
+            CASE 
+                WHEN category IS NULL OR category = '' THEN 'Uncategorized'
+                ELSE category 
+            END as category,
+            SUM(amount) as totalAmount, 
+            COUNT(*) as transactionCount
+        FROM transactions 
+        WHERE transactionType = 'DEBIT' 
+        AND isDeleted = 0 
+        AND (:startDate IS NULL OR messageReceivedAt >= :startDate)
+        AND (:endDate IS NULL OR messageReceivedAt <= :endDate)
+        GROUP BY 
+            CASE 
+                WHEN category IS NULL OR category = '' THEN 'Uncategorized'
+                ELSE category 
+            END
+        ORDER BY totalAmount DESC
+    """)
+    suspend fun getCategoryWiseSpendingIncludingUncategorized(startDate: Long? = null, endDate: Long? = null): List<CategorySpending>
 }
